@@ -1,11 +1,21 @@
 import "./App.css";
 import { Cart, HomePage, ProductPage, Profile, Signin, Signup, Wishlist } from "./pages/index";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
+
+import { Footer, Navbar } from "./components";
+
 import logo from "./logo.png";
 
+
+
+
 function App() {
+  const location = useLocation();
   return (
     <>Bachat_Bazaar
+
+      <Navbar />
+
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/product" element={<ProductPage />} />
@@ -14,7 +24,10 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/signin" element={<Signin />} />
         <Route path="/profile" element={<Profile />} />
-      </Routes></>
+      </Routes>
+
+      <Footer />
+    </>
 
   );
 }
