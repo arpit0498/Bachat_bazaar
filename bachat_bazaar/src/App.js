@@ -3,6 +3,7 @@ import { Cart, HomePage, ProductPage, Profile, Signin, Signup, Wishlist } from "
 import { Routes, Route, useLocation } from "react-router-dom";
 
 import { Footer, Navbar } from "./components";
+import Mockman from "mockman-js";
 
 import logo from "./logo.png";
 
@@ -24,6 +25,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/signin" element={<Signin />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/mockman-test" element={<Mockman />} />
       </Routes>
 
       <Footer />
