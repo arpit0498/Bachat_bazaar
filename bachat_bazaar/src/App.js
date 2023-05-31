@@ -1,11 +1,10 @@
 import "./App.css";
-import { Cart, HomePage, ProductPage, Profile, Signin, Signup, Wishlist } from "./pages/index";
+import { Cart, HomePage, ProductPage, Profile, Signin, Signup, Wishlist, About } from "./pages/index";
 import { Routes, Route, useLocation } from "react-router-dom";
 
 import { Footer, Navbar } from "./components";
 import Mockman from "mockman-js";
 
-import logo from "./logo.png";
 
 
 
@@ -15,8 +14,9 @@ function App() {
   return (
     <>Bachat_Bazaar
 
-      <Navbar />
-
+      {
+        !["/signin", "/signup"].includes(location.pathname) && <Navbar />
+      }
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/product" element={<ProductPage />} />
@@ -26,9 +26,11 @@ function App() {
         <Route path="/signin" element={<Signin />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/mockman-test" element={<Mockman />} />
+        <Route path="/about" element={<About />} />
       </Routes>
-
-      <Footer />
+      {
+        !["/signin", "/signup"].includes(location.pathname) && <Footer />
+      }
     </>
 
   );
