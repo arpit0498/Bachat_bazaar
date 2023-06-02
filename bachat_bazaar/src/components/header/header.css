@@ -19,8 +19,9 @@
 .main-text p {
     padding-bottom:4rem ;
 }
-.main-btn{
-    margin-top: 2rem;
+.header-btn{
+   
     padding: 1rem 3rem;
     font-size: 1.8rem;
+   
 }

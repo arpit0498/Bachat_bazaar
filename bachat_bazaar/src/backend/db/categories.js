@@ -29,22 +29,23 @@ import { v4 as uuid } from "uuid";
 export const categories = [
   {
     _id: uuid(),
+    img: "https://m.media-amazon.com/images/G/31/img23/HPC/CatPage/Halo_434x434_3_V2._SS400_QL85_.jpg",
 
-    categoryName: "sweatshirts",
+    categoryName: "supplements",
   },
   {
     _id: uuid(),
-
-    categoryName: "jackets",
+    img: "https://m.media-amazon.com/images/I/7197avBhrVL._AC_UF226,226_FMjpg_.jpg",
+    categoryName: "equipments",
   },
   {
     _id: uuid(),
-
-    categoryName: "coats",
+    img: "https://images-eu.ssl-images-amazon.com/images/G/31/img22/HPC/CatPage/SBC-2.jpg",
+    categoryName: "nutrition",
   },
   {
     _id: uuid(),
-
-    categoryName: "others",
+    img: "https://m.media-amazon.com/images/G/31/img22/HPC/CatPage/Halo_434x434_2._SS400_QL85_.jpg",
+    categoryName: "ayurveda",
   },
 ];

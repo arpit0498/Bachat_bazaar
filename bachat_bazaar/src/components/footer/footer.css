@@ -68,12 +68,13 @@ footer .content .top {
   background: #fff;
 }
 .top .media-icons a:nth-child(3) {
-  background: #ffffff;
+   background: #4267b2;
 }
 .top .media-icons a:nth-child(3):hover {
-  color: #ffffff;
-  background: #000000;
+  color:#4267b2;
+  background: #fff;
 }
+
 
 footer .content .link-boxes {
   width: 100%;

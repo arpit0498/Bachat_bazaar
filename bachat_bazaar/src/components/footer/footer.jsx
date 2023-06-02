@@ -3,17 +3,6 @@ import "./footer.css"
 
 export function Footer() {
     return (
-        // <footer className="footer">
-        //     <p>Made by  <i className="red-color fas fa-heart"></i> Arpit Gupta </p>
-        //     <ul style={{ listStyle: "none" }} >
-        //         <li className="p1 inline"><a href="#" target="_blank"><i className="fab fa-github"></i></a></li>
-        //         <li className="p1 inline"><a href="#" target="_blank"><i className="fab fa-twitter"></i></a></li>
-        //         <li className="p1 inline"><a href="#" target="_blank"><i className="fab fa-linkedin-in"></i></a></li>
-        //     </ul>
-
-
-        //     <div>© copyright 2023</div>
-        // </footer>
         <footer>
             <div class="content">
                 <div class="top">
@@ -23,23 +12,25 @@ export function Footer() {
                     <div class="media-icons">
                         <a target="on_blank" href="#"><i class="fab fa-facebook"></i></a>
                         <a target="on_blank" href="#"><i class="fab fa-instagram"></i></a>
-                        <a target="on_blank" href="#"><i class="fa-brands fa-github"></i></a>
+                        <a target="on_blank" href="#"><i class="fab fa-twitter"></i></a>
+
+
                     </div>
                 </div>
                 <div class="link-boxes">
                     <ul class="box">
                         <li class="link_name">Links</li>
-                        <li><a href="">Home</a></li>
-                        <li><a href="">About Us</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About Us</a></li>
 
 
                     </ul>
                     <ul class="box">
                         <li class="link_name">Recommended</li>
-                        <li><a href="">Jackets</a></li>
-                        <li><a href="">Mufflers</a></li>
-                        <li><a href="">Sweat shirts</a></li>
-                        <li><a href="">Hoodies</a></li>
+                        <li><a href="">Ayurveda</a></li>
+                        <li><a href="">Equipments</a></li>
+                        <li><a href="">Vitamins</a></li>
+                        <li><a href="">Supplements</a></li>
 
                     </ul>
                     <ul class="box">
