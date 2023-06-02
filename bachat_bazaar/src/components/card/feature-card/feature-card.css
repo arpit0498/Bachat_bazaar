@@ -1,0 +1,18 @@
+.card-feature{
+    border: 3px solid black;
+    display: flex;
+    overflow: hidden;
+}
+
+.featured-heading{
+    margin: auto;
+    text-align: center;
+    background-color: black;
+    color: rgb(255, 255, 255);
+
+}
+
+.btn-featured{
+   
+    margin-left: 30%;
+}

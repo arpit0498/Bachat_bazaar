@@ -13,10 +13,11 @@ function App() {
   const location = useLocation();
   return (
     <>Bachat_Bazaar
+      <Navbar />
 
-      {
+      {/* {
         !["/signin", "/signup"].includes(location.pathname) && <Navbar />
-      }
+      } */}
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/product" element={<ProductPage />} />
@@ -25,12 +26,13 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/signin" element={<Signin />} />
         <Route path="/profile" element={<Profile />} />
-        <Route path="/mockman-test" element={<Mockman />} />
+        <Route path="/test" element={<Mockman />} />
         <Route path="/about" element={<About />} />
       </Routes>
-      {
+      {/* {
         !["/signin", "/signup"].includes(location.pathname) && <Footer />
-      }
+      } */}
+
     </>
 
   );

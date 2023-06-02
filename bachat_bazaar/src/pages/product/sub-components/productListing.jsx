@@ -6,18 +6,13 @@ import { useFilteredProducts } from "../../../custom-hooks/useFilteredProducts"
 const ProductListing = () => {
     const { productList } = useProduct()
     const filteredData = useFilteredProducts(productList)
-
     return (
-        <>Product listing
-            <main >
-                {(filteredData.length > 0) ?
-                    filteredData.map(
-                        (productDetails) => <ProductCard key={productDetails._id} productDetails={productDetails}
-                        />) : <h4>"No Product found for this set of filters.☹️"</h4>}
-            </main>
-        </>
-
+        <main className="product-main flex-wrap">
+            {(filteredData.length > 0) ?
+                filteredData.map(
+                    (productDetails) => <ProductCard key={productDetails._id} productDetails={productDetails}
+                    />) : <h4>"No Product found for this set of filters.☹️"</h4>}
+        </main>
     )
 }
-
 export { ProductListing }
