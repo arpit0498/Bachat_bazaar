@@ -2,6 +2,7 @@
 import { useNavigate } from "react-router-dom";
 import { useProduct } from "../../contexts/product-context"
 import { useAuth } from "../../contexts/auth-context";
+import { toast } from "react-hot-toast";
 
 const Profile = () => {
     const navigate = useNavigate()
@@ -10,8 +11,9 @@ const Profile = () => {
     const logoutHandler = () => {
         localStorage.removeItem("token")
         localStorage.removeItem("user")
+        toast.success(`${user.firstName} ${user.lastName} successfully!  Logged out`);
         dispatch({ type: "LOGOUT" })
-        navigate("/")
+        navigate("/logout")
         setUser("")
     }
     return (
