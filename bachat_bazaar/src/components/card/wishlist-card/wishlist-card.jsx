@@ -45,7 +45,7 @@ const WishlistCard = ({ wishlistItem }) => {
     return (
         <div className="m2 card card-vertical-container2">
             <img src={img} alt="croton" className="card-img" />
-            <i onClick={() => removeFromWishlist(_id)} className="card-close-btn fas fa-times"></i>
+            <i style={{ color: "black" }} onClick={() => removeFromWishlist(_id)} className="card-close-btn fas fa-times"></i>
             <div className="p1 card-text-container">
                 <div className="card-heading flex-r">
                     <div>
