@@ -2,7 +2,7 @@ import axios from "axios";
 import { createContext, useContext } from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import { toast } from "react-hot-toast";
 
 const AuthContext = createContext();
 
@@ -27,6 +27,12 @@ export const AuthProvider = ({ children }) => {
                 localStorage.setItem("user", JSON.stringify({ user: response.data.foundUser }))
                 setToken(response.data.encodedToken)
                 setUser(response.data.foundUser)
+                // toast.success(`Hi, ${user.firstName}!`, {
+                //     icon: "👋",
+                // });
+                toast.success(`Hi, Welcome towards Your First journey to become fit & Healthy `, {
+                    icon: "👋",
+                });
                 navigate("/product")
 
             }

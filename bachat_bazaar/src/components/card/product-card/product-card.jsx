@@ -1,6 +1,7 @@
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { useProduct } from "../../../contexts/product-context";
+import { toast } from "react-hot-toast";
 
 const ProductCard = ({ productDetails }) => {
     const { cart, wishlist, dispatch } = useProduct()
@@ -18,6 +19,7 @@ const ProductCard = ({ productDetails }) => {
                     }
                 })
             dispatch({ type: "CHANGE_CART", payload: response.data.cart })
+            toast.success(`Add to cart successfully!`);
         } catch (error) {
             console.error(error)
         }
@@ -33,6 +35,7 @@ const ProductCard = ({ productDetails }) => {
                     },
                 })
             dispatch({ type: "CHANGE_WISHLIST", payload: response.data.wishlist })
+            toast.success(`Add to wishlist successfully!`);
         }
         catch (error) {
             console.error(error);
@@ -49,8 +52,11 @@ const ProductCard = ({ productDetails }) => {
                     }
                 }
             )
+            toast.success(`removed from wishlist successfully!`);
             dispatch({ type: "CHANGE_WISHLIST", payload: response.data.wishlist })
+
         }
+
         catch (error) {
             console.error(error)
         }
@@ -80,6 +86,7 @@ const ProductCard = ({ productDetails }) => {
                         : localStorage.token ?
                             <button onClick={() => addToCart(productDetails)} className="btn btn-with-icon">
                                 <i className="p1-right fas fa-shopping-cart"></i>
+
                                 Add to cart
                             </button> :
                             <Link to="/signin">
@@ -93,6 +100,7 @@ const ProductCard = ({ productDetails }) => {
 
                     {wishlist.find((wishlistItem) => wishlistItem.id === productDetails.id) ?
                         <button
+                            style={{ color: "red" }}
                             onClick={() => removeFromWishlist(_id)}
                             className="wishlist-btn-clicked btn btn-icon1 card-icon-btn m-left-auto">
                             <i className="fa-solid fa-heart"></i></button>

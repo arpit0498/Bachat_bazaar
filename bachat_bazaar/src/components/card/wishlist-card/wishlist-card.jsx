@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useProduct } from "../../../contexts/product-context";
+import { toast } from "react-hot-toast";
 
 const WishlistCard = ({ wishlistItem }) => {
 
@@ -18,6 +19,7 @@ const WishlistCard = ({ wishlistItem }) => {
                 }
             )
             dispatch({ type: "CHANGE_WISHLIST", payload: response.data.wishlist })
+            toast.success(`Removed from wishlist !`);
 
         }
         catch (error) {
@@ -36,6 +38,7 @@ const WishlistCard = ({ wishlistItem }) => {
                     }
                 })
             dispatch({ type: "CHANGE_CART", payload: response.data.cart })
+            toast.success(`Added to cart !`);
         } catch (error) {
             console.error(error)
         }
@@ -45,7 +48,7 @@ const WishlistCard = ({ wishlistItem }) => {
     return (
         <div className="m2 card card-vertical-container2">
             <img src={img} alt="croton" className="card-img" />
-            <i style={{ color: "black" }} onClick={() => removeFromWishlist(_id)} className="card-close-btn fas fa-times"></i>
+            <i style={{ color: "red" }} onClick={() => removeFromWishlist(_id)} className="card-close-btn fas fa-times"></i>
             <div className="p1 card-text-container">
                 <div className="card-heading flex-r">
                     <div>

@@ -1,11 +1,11 @@
 import "./App.css";
-import { Cart, HomePage, ProductPage, Profile, Signin, Signup, Wishlist, About } from "./pages/index";
+import { Cart, HomePage, ProductPage, Profile, Signin, Signup, Logout, Wishlist, About } from "./pages/index";
 import { Routes, Route, useLocation } from "react-router-dom";
 
 import { Footer, Navbar } from "./components";
 import Mockman from "mockman-js";
 
-
+import { Toaster } from "react-hot-toast";
 
 
 
@@ -14,6 +14,13 @@ function App() {
   return (
     <>Bachat_Bazaar
       <Navbar />
+      <Toaster
+        position="top-right"
+        reverseOrder={false}
+        containerStyle={{
+          top: "5rem",
+        }}
+      />
 
       {/* {
         !["/signin", "/signup"].includes(location.pathname) && <Navbar />
@@ -26,6 +33,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/signin" element={<Signin />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/logout" element={<Logout />} />
         <Route path="/test" element={<Mockman />} />
         <Route path="/about" element={<About />} />
       </Routes>

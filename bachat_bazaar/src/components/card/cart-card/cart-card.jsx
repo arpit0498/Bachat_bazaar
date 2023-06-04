@@ -1,6 +1,7 @@
 import axios from "axios"
 import { useProduct } from "../../../contexts/product-context"
 import { useEffect, useState } from "react"
+import { toast } from "react-hot-toast";
 
 export const CartCard = ({ cartItem }) => {
     const encodedToken = localStorage.getItem("token")
@@ -62,6 +63,8 @@ export const CartCard = ({ cartItem }) => {
                 }
             )
             dispatch({ type: "CHANGE_CART", payload: response.data.cart })
+            toast.success(` Removed from cart successfully!`);
+
         } catch (error) {
             console.error(error)
         }
@@ -78,6 +81,7 @@ export const CartCard = ({ cartItem }) => {
                     },
                 })
             dispatch({ type: "CHANGE_WISHLIST", payload: response.data.wishlist })
+            toast.success(` Move to wishlist successfully!`);
         } catch (error) {
             console.error(error)
         }
