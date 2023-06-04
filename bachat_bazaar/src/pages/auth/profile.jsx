@@ -8,7 +8,11 @@ const Profile = () => {
     const { user, setUser } = useAuth()
     const { dispatch } = useProduct()
     const logoutHandler = () => {
-        console.log("logout")
+        localStorage.removeItem("token")
+        localStorage.removeItem("user")
+        dispatch({ type: "LOGOUT" })
+        navigate("/")
+        setUser("")
     }
     return (
         <div className="flex-c center profile-section">

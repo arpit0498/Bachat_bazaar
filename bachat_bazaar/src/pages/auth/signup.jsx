@@ -5,7 +5,6 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom";
 import { useDocumentTitle } from "../../custom-hooks/useDocumentTitle"
 import { useAuth } from "../../contexts/auth-context"
-// import authImg from "../../assets/images/authentication.svg"
 import signup from "../../assets/images/signup.svg"
 
 const Signup = () => {

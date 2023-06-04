@@ -27,7 +27,7 @@ export const AuthProvider = ({ children }) => {
                 localStorage.setItem("user", JSON.stringify({ user: response.data.foundUser }))
                 setToken(response.data.encodedToken)
                 setUser(response.data.foundUser)
-                navigate("/products")
+                navigate("/product")
 
             }
         }

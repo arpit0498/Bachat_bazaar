@@ -18,7 +18,7 @@ export function Navbar() {
 
             <div className="nav-link">
                 <Link to="/"><button className="btn btn-link nav-btn">Home</button></Link>
-                <Link to="/product"><button className="btn btn-link nav-btn">Catagories</button></Link>
+                <Link to="/product"><button className="btn btn-link nav-btn">Products</button></Link>
                 <Link to="/about"><button className="btn btn-link nav-btn">About us</button></Link>
             </div>
 
