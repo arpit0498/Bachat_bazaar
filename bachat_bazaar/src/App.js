@@ -2,7 +2,7 @@ import "./App.css";
 import { Cart, HomePage, ProductPage, Profile, Signin, Signup, Logout, Wishlist, About } from "./pages/index";
 import { Routes, Route, useLocation } from "react-router-dom";
 
-import { Footer, Navbar } from "./components";
+import { Footer, Navbar, Slider } from "./components";
 import Mockman from "mockman-js";
 
 import { Toaster } from "react-hot-toast";
@@ -12,8 +12,9 @@ import { Toaster } from "react-hot-toast";
 function App() {
   const location = useLocation();
   return (
-    <>Bachat_Bazaar
+    <>
       <Navbar />
+      <Slider />
       <Toaster
         position="top-right"
         reverseOrder={false}
