@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { useProduct } from "../../../contexts/product-context"
-
+import { Link } from "react-router-dom"
 
 const PriceSection = () => {
     const { cart } = useProduct()
@@ -46,8 +46,7 @@ const PriceSection = () => {
                 <h6>Total Amount</h6>
                 <h6>{priceObj.dicountedPrice}</h6>
             </div>
-
-            <button className="btn-order btn btn-primary">Place Order</button>
+            <Link to="/checkout"><button className="btn-order btn btn-primary">Place Order</button></Link>
         </section>
     )
 }
