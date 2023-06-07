@@ -31,14 +31,14 @@ const Profile = () => {
                         <div>Email ID</div>
                         <div>{`${user.email}`}</div>
                     </div>
-                    <div className="price-breakup">
+                    {/* <div className="price-breakup">
                         <div>Address</div>
                         <div>Lorem ipsum </div>
                     </div>
                     <div className="price-breakup">
                         <div>Contact</div>
                         <div>748741458</div>
-                    </div>
+                    </div> */}
                 </div>
 
                 <button onClick={logoutHandler} className="btn-logout btn btn-primary">Log out</button>

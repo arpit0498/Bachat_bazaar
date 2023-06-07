@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { useProduct } from "../../../contexts/product-context"
-
+import { Link } from "react-router-dom"
 
 const PriceSection = () => {
     const { cart } = useProduct()
@@ -15,6 +15,9 @@ const PriceSection = () => {
                 }
             ), { totalPrice: 0, dicountedPrice: 0 }))
     }, [cart])
+
+    const discount = 0.35 * priceObj.totalPrice;
+    const finalAmount = priceObj.totalPrice - discount;
     return (
         <section className="cart-price-section">
             {/* <h6>Coupons</h6>
@@ -41,13 +44,17 @@ const PriceSection = () => {
                     <div>Convenience Fee</div>
                     <div>FREE</div>
                 </div>
+                <div className="price-breakup">
+                    <div>Discount (35% on MRP)</div>
+                    <div>-₹{`${discount.toFixed(2)}`}</div>
+                </div>
             </div>
             <div className="price-breakup">
                 <h6>Total Amount</h6>
-                <h6>{priceObj.dicountedPrice}</h6>
+                <div>₹{`${finalAmount.toFixed(2)}`}</div>
+                {/* <h6>{priceObj.dicountedPrice}</h6> */}
             </div>
-
-            <button className="btn-order btn btn-primary">Place Order</button>
+            <Link to="/order-successful"><button className="btn-order btn btn-primary">Place Order</button></Link>
         </section>
     )
 }

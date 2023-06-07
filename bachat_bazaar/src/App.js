@@ -1,5 +1,5 @@
 import "./App.css";
-import { Cart, HomePage, ProductPage, Profile, Signin, Signup, Logout, Wishlist, About } from "./pages/index";
+import { Cart, HomePage, ProductPage, Profile, Signin, Signup, Logout, Wishlist, About, OrderSuccessful, Checkout } from "./pages/index";
 import { Routes, Route, useLocation } from "react-router-dom";
 
 import { Footer, Navbar, Slider } from "./components";
@@ -14,7 +14,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <Slider />
+      {/* <Slider /> */}
       <Toaster
         position="top-right"
         reverseOrder={false}
@@ -37,6 +37,8 @@ function App() {
         <Route path="/logout" element={<Logout />} />
         <Route path="/test" element={<Mockman />} />
         <Route path="/about" element={<About />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/order-successful" element={<OrderSuccessful />} />
       </Routes>
       {/* {
         !["/signin", "/signup"].includes(location.pathname) && <Footer />

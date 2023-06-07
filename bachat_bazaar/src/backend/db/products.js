@@ -24,7 +24,7 @@ export const products = [
     _id: uuid(),
     img: "https://m.media-amazon.com/images/I/71s0tJ-iLtL._SX569_.jpg",
     title: 'Complan',
-    inStock: false,
+    inStock: true,
     rating: 4.5,
     price: 600,
     productDesc: "Complan is a nutrition and health drink ",
