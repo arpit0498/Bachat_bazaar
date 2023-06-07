@@ -21,11 +21,11 @@ export function Navbar() {
                 <Link to="/product"><button className="btn btn-link nav-btn">Products</button></Link>
                 <Link to="/about"><button className="btn btn-link nav-btn">About us</button></Link>
             </div>
-
+            {/* 
             <div className="search-input input-container">
                 <input className="input-icon-field input-field" type="text" placeholder="Search" />
                 <i className="input-icon fas fa-search"></i>
-            </div>
+            </div> */}
 
             <div className="flex-r nav-icons">
                 {user ? <div className="flex-c center">

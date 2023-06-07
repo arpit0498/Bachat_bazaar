@@ -55,7 +55,7 @@ const WishlistCard = ({ wishlistItem }) => {
                         <h5 className="card-header">{title}</h5>
                         <div className="card-info">{inStock ? "Stock available" : "Stock Unavailable"}</div>
                         <div className="rating-badge align-center">
-                            {rating}<i className="rating-badge-star fa-solid fa-star"></i> | 10
+                            {rating}<i className="rating-badge-star fa-solid fa-star"></i> | 5
                         </div>
                     </div>
                     <p className="card-price m-left-auto">Rs. {price}</p>

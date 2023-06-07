@@ -1,12 +1,8 @@
 import "./cart.css"
 import { CartCard } from "../../components/card/cart-card/cart-card"
-import { Loader } from "..//../components/Loader/Loader"
 import { useProduct } from "../../contexts/product-context";
 import { PriceSection } from "./sub-components/price-section";
 import { Link } from "react-router-dom";
-import { useState } from "react";
-
-
 
 const Cart = () => {
 

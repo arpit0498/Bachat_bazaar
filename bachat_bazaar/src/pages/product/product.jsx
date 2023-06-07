@@ -7,7 +7,7 @@ const ProductPage = () => {
     useDocumentTitle("Products")
     return (
         <>
-            <div className="flex-r">
+            <div className="product-page">
                 <FilterSidebar />
                 <ProductListing />
             </div>
